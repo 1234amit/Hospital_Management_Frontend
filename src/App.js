@@ -1,12 +1,19 @@
 import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Header from './components/Header';
+// import Footer from './components/Footer';
+import Footermain from './components/Footermain';
 
 const App = () => {
   return (
     <div>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Click me
-      </button>
-
+      <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      {/* <Footer /> */}
+      <Footermain />
     </div>
   )
 }
