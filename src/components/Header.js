@@ -36,6 +36,10 @@ const Header = () => {
     const handleToggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
+    
+    const closeDropdown = () => {
+        setDropdownOpen(false);
+    };
 
     const handleLogout = () =>{
         console.log("logout button prassed")
@@ -150,40 +154,47 @@ const Header = () => {
                                                 <>
                                                     
                                                     <div className="relative">
-                                                        <button
-                                                            onClick={handleToggleDropdown}
-                                                            className="lg:text-lg text-white font-lato font-medium hover:text-highRed py-2 lg:py-0"
-                                                        >
-                                                            {auth?.user?.name}
-                                                        </button>
+        <button
+            onClick={() => setDropdownOpen(prevState => !prevState)}
+            className="lg:text-lg text-white font-lato font-medium hover:text-highRed py-2 lg:py-0"
+        >
+            {auth?.user?.name}
+        </button>
 
-                                                        {/* Dropdown content */}
-                                                        <div
-                                                            className={`absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg py-2 z-10 ${
-                                                            dropdownOpen ? '' : 'hidden'
-                                                            }`}
-                                                        >
-                                                            {/* Dropdown items */}
-                                                                <Link
-                                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-200" onClick={handleDashboardClick} to="/dashboard"
-                                                                >
-                                                                Dashboard
-                                                                </Link>
-                                                                <Link
-                                                                to="/appointment"
-                                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                                                                >
-                                                                Appointment
-                                                                </Link>
-                                                                <button
-                                                                onClick={handleLogout}
-                                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
-                                                                >
-                                                                Logout
-                                                                </button>
-                                                            {/* Add other dropdown items as needed */}
-                                                        </div>
-                                                    </div>
+        {/* Dropdown content */}
+        <div
+            onClick={closeDropdown}
+            className={`absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg py-2 z-10 ${dropdownOpen ? '' : 'hidden'}`}
+        >
+            {/* Dropdown items */}
+            <Link
+                onClick={closeDropdown} // Close dropdown when Dashboard is clicked
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                to={`/dashboard/${auth?.user?.role === 1 ? "admin" : "user"}`}
+            >
+                Dashboard
+            </Link>
+            <Link
+                onClick={(e) => {
+                    e.stopPropagation(); // Prevent closing dropdown
+                }}
+                to="/appointment"
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+            >
+                Appointment
+            </Link>
+            <button
+                onClick={(e) => {
+                    e.stopPropagation(); // Prevent closing dropdown
+                    handleLogout();
+                }}
+                className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
+            >
+                Logout
+            </button>
+            {/* Add other dropdown items as needed */}
+        </div>
+    </div>
 
                                                 </>
                                             )
