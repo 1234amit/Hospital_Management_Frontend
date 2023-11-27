@@ -19,7 +19,7 @@ const Header = () => {
                                 </p>
                             </div>
                             <div className="">
-                                <p className="text-white text-xs md:text-base font-normal font-lato">contact@somerianhealth.com
+                                <p className="text-white text-xs md:text-base font-normal font-lato">contact@hospitalManagement.com
                                 </p>
                             </div>
                         </div>
@@ -30,7 +30,7 @@ const Header = () => {
                                 </p>
                             </div>
                             <div className="">
-                                <p className="text-white text-xs md:text-base font-normal font-lato">+971 24 090 555
+                                <p className="text-white text-xs md:text-base font-normal font-lato">+8801723423423
                                 </p>
                             </div>
 
@@ -42,7 +42,7 @@ const Header = () => {
 
         {/* <!-- ==========================Nav-start================== --> */}
         <nav>
-            <div className="bg-hero bg-cover bg-center  py-4 lg:pb-10 hero  lg:px-0">
+            <div className="bg-hero bg-cover bg-center  py-4 hero  lg:px-0">
                 <div className="nav_black" id="myHeader">
                     <div className="container mx-auto">
                         <div className="grid grid-cols-12 items-center menu_area ">
@@ -61,25 +61,29 @@ const Header = () => {
                             </div>
                             <div className="col-span-12 lg:col-span-8  ">
                                 <ul className=" lg:flex lg:justify-between hidden dropdown mobile_menu">
-                                    <li><a className=" lg:text-lg  text-white  font-lato font-medium hover:text-highRed py-2 lg:py-0 "
-                                            href="index.html">Home</a>
+                                    <li><Link className=" lg:text-lg  text-white  font-lato font-medium hover:text-highRed py-2 lg:py-0 "
+                                            to="/">Home</Link>
                                     </li>
-                                    <li><a className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0 "
-                                            href="aboutUs.html">About
-                                            Us</a>
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0 "
+                                            to="aboutUs.html">About
+                                            Us</Link>
                                     </li>
-                                    <li><a className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0"
-                                            href="services.html">Services</a>
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0"
+                                            to="services.html">Services</Link>
                                     </li>
-                                    <li><a className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0"
-                                            href="doctor.html">Doctors</a>
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0"
+                                            to="doctor.html">Doctors</Link>
                                     </li>
-                                    <li><a className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0 "
-                                            id="patnar" href="careers.html">Careers</a>
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0 "
+                                            id="patnar" to="careers.html">Careers</Link>
                                     </li>
-                                    <li><a className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0"
-                                            href="contact.html">Contact
-                                            Us</a></li>
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0"
+                                            to="contact.html">Contact
+                                            Us</Link></li>
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0" to="/login">Login</Link></li>
+
+                                    <li><Link className=" lg:text-lg  text-white   font-lato font-medium hover:text-highRed py-2 lg:py-0" to="/registration">Registration</Link></li>
+
                                     <div className="search">
                                         <div className=" flex justify-end lg:justify-start">
                                             <div
@@ -129,78 +133,9 @@ const Header = () => {
                             Technology
                         </h2>
                     </div>
-                    <div className="mt-5 md:mt-8 lg:mt-11">
-                        <div className="lg:w-11/12 lg:mx-auto">
-                            <div className="px-3">
-                                <h2
-                                    className="font-lato font-semibold text-white bg-lightRed inline-block rounded-t-xl py-2 px-4  lg:py-5 lg:px-20 text-base">
-                                    Make an Appoinment</h2>
-                                <div className=" bg-white py-5 px-4 md:p-8 lg:p-12 rounded-xl rounded-tl-none">
-                                    <div className=" ">
-                                        <form action="">
-                                            <div className="lg:grid lg:grid-cols-3 lg:gap-4 ">
-                                                <div className="mb-2">
-                                                    <input type="text"
-                                                        className=" w-full bg-ash p-4 font-lato text-highBlue text-lg rounded-lg focus:outline-none placeholder:text-lightBlue placeholder:text-base placeholder:font-normal" placeholder="Name" />
-                                                </div>
-                                                <div className="mb-2">
-                                                    <input
-                                                        className=" w-full bg-ash p-4 font-lato  text-highBlue text-lg rounded-lg focus:outline-none placeholder:text-lightBlue placeholder:text-base placeholder:font-normal"
-                                                        type="text" placeholder="Phone"
-                                                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" />
-                                                </div>
-                                                <div className="mb-2">
-                                                    <input
-                                                        className=" w-full bg-ash p-4 font-lato text-base text-highBlue rounded-lg focus:outline-none placeholder:text-lightBlue placeholder:text-base placeholder:font-normal"
-                                                        type="Emali" placeholder="Emali Address" />
-                                                </div>
-                                                <div className="mb-2">
-                                                    <select className=" w-full bg-ash p-4  font-lato text-base text-highBlue 
-                                                                    rounded-lg focus:outline-none">
-                                                        <option selected value="">Sectect Department</option>
-                                                        <option value="">Dermatologist</option>
-                                                        <option value="">General Practitioner</option>
-                                                        <option value="">Consultant Physician</option>
-                                                        <option value="">Specialist Radiologist</option>
-
-                                                    </select>
-                                                </div>
-                                                <div className="mb-2 ">
-                                                    <select
-                                                        className="w-full bg-ash p-4  font-lato  text-highBlue text-lg
-                                                        rounded-lg focus:outline-none">
-                                                        <option value="" selected>Select Doctor</option>
-                                                        <option value="">Dr.Karrar Khalid</option>
-                                                        <option value="">Dr.Zaki Aldin Al Shariff</option>
-                                                        <option value="">Dr.Hameed Al Ansari</option>
-                                                        <option value="">Dr.Annable Talisayon</option>
-
-                                                    </select>
-                                                </div>
-                                                <div className="mb-3  ">
-                                                    <input
-                                                        className=" w-full bg-ash p-4 font-lato text-base text-highBlue 
-                                                        rounded-lg focus:outline-none placeholder:text-lightBlue placeholder:text-base placeholder:font-normal textbox-n"
-                                                        placeholder="Date" type="text"
-                                                        onfocus="(this.type='date')" id="date" />
-                                                </div>
-                                                <div className=""></div>
-                                                <div className="">
-                                                    <button
-                                                        className="font-lato font-semibold text-white bg-lightRed inline-block px-20 py-5  rounded w-full text-lg"
-                                                        type="submit"> Book now</button>
-                                                </div>
-                                            </div>
-
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 {/* <!-- =========Hero-card start=============== --> */}
-                <section>
+                {/* <section>
                     <div className=" lg:mt-32 lg:mb-m130">
                         <div className="container mx-auto py-4 md:py-10 lg:py-0  ">
                             <div className="px-3">
@@ -272,7 +207,7 @@ const Header = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
                 {/* <!-- =========Hero-card End=============== --> */}
             </div>
         </nav>
