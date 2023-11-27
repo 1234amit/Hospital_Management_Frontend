@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios'
 
@@ -9,7 +9,7 @@ const Registration = () => {
     const [password, setPassword] = useState("");
     const [phone, setPhone] = useState("");
     const [address, setAddress] = useState("");
-    const [answer, setAnswer] = useState("");
+    // const [answer, setAnswer] = useState("");
     const [country, setCountry] = useState("");
     const [city, setCity] = useState("");
     const [valid, setValid] = useState(true);
@@ -39,7 +39,7 @@ const Registration = () => {
                 password,
                 phone,
                 address,
-                answer,
+                // answer,
                 country,
                 city,
             });
@@ -128,16 +128,6 @@ const Registration = () => {
               required
             />
             {!valid && <p>Please enter a valid 10-digit phone number.</p>}
-
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              type="text"
-              name="answer"
-              placeholder="Disease Name"
-              value={answer}
-            onChange={(e) => setAnswer(e.target.value)}
-              required
-            />
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
@@ -146,6 +136,18 @@ const Registration = () => {
             </button>
           </div>
         </form>
+
+        <div className="mt-3">
+            <p className="text-sm">
+                Don't Have an Account?{' '}
+                <NavLink
+                to="/login"
+                className="text-blue-500 hover:text-blue-700 underline"
+                >
+                Login Here
+                </NavLink>
+            </p>
+        </div>
       </div>
     </div>
   );

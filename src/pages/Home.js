@@ -18,6 +18,12 @@ import technologyImg from '../assets/img/Technology.png';
 import doctorImg from '../assets/img/doctor.png';
 import tetiscopImg from '../assets/img/Tetiscop.png';
 
+import vacsineDone from '../assets/img/vaccine_done.png';
+import labretory  from '../assets/img/labretory.png';
+import hospitalBed from '../assets/img/hospital_bed.png';
+import staff  from '../assets/img/staff.png';
+import centerHospital from '../assets/img/center_hospital.png';
+
 const Home = () => {
   return (
     <div>
@@ -32,7 +38,7 @@ const Home = () => {
                                     <div class="flex justify-center">
                                         <div
                                             class=" w-32 h-32 border-4 border-highRed rounded-full flex justify-center items-center">
-                                            <img src="./img/vaccine_done.png" alt="" />
+                                            <img src={vacsineDone} alt="" />
                                         </div>
                                     </div>
                                     <h2 class="font-lato font-bold   text-highBlue text-xl text-center mt-2 "><span
@@ -48,7 +54,7 @@ const Home = () => {
                             <div class="flex justify-center">
                                 <div
                                     class=" w-32 h-32 border-4 border-highRed rounded-full flex justify-center items-center">
-                                    <img src="./img/labretory.png" alt="" />
+                                    <img src={labretory} alt="" />
                                 </div>
                             </div>
                             <h2 class="font-lato font-bold   text-highBlue text-xl text-center mt-2"><span class="counter"
@@ -61,7 +67,7 @@ const Home = () => {
                             <div class="flex justify-center">
                                 <div
                                     class=" w-32 h-32 border-4 border-highRed rounded-full flex justify-center items-center">
-                                    <img src="./img/hospital_bed.png" alt="" />
+                                    <img src={hospitalBed} alt="" />
                                 </div>
                             </div>
                             <h2 class="font-lato font-bold   text-highBlue text-xl text-center mt-2"><span class="counter"
@@ -74,7 +80,7 @@ const Home = () => {
                             <div class="flex justify-center">
                                 <div
                                     class=" w-32 h-32 border-4 border-highRed rounded-full flex justify-center items-center">
-                                    <img src="./img/staff.png" alt="" />
+                                    <img src={staff} alt="" />
                                 </div>
                             </div>
                             <h2 class="font-lato font-bold   text-highBlue text-xl text-center mt-2"><span class="counter"
@@ -87,7 +93,7 @@ const Home = () => {
                             <div class="flex justify-center">
                                 <div
                                     class=" w-32 h-32 border-4 border-highRed rounded-full flex justify-center items-center">
-                                    <img src="./img/center_hospital.png" alt="" />
+                                    <img src={centerHospital} alt="" />
                                 </div>
                             </div>
                             <h2 class="font-lato font-bold   text-highBlue text-xl text-center mt-2"><span class="counter"

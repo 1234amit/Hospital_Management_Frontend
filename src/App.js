@@ -6,6 +6,13 @@ import Header from './components/Header';
 import Footermain from './components/Footermain';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
+import About from './pages/About';
+import Appointment from './pages/Patients/Appointment';
+import PrivateRoute from './components/Routes/Private';
+import Dashboard from './pages/Patients/Dashboard';
+import AdminRoute from './components/Routes/AdminRoute';
+import AdminDashboard from './pages/Admin/AdminDashboard';
+import PageNotFound from './pages/PageNotFound';
 
 const App = () => {
   return (
@@ -13,9 +20,23 @@ const App = () => {
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/appointment" element={<Appointment />} />
+
+          <Route path="/dashboard" element={<PrivateRoute />}>
+            <Route path="user" element={<Dashboard />} />
+          </Route>
+
+          <Route path="/dashboard" element={<AdminRoute />}>
+            <Route path="admin" element={<AdminDashboard />} />
+          </Route>
+
+          <Route path="*" element={<PageNotFound />}></Route>
+
         </Routes>
+
       {/* <Footer /> */}
       <Footermain />
     </div>
