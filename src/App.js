@@ -13,6 +13,8 @@ import Dashboard from './pages/Patients/Dashboard';
 import AdminRoute from './components/Routes/AdminRoute';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import PageNotFound from './pages/PageNotFound';
+import AddDoctor from './pages/Admin/AddDoctor';
+import AllDoctor from './pages/Admin/AllDoctor';
 
 const App = () => {
   return (
@@ -31,6 +33,8 @@ const App = () => {
 
           <Route path="/dashboard" element={<AdminRoute />}>
             <Route path="admin" element={<AdminDashboard />} />
+            <Route path="admin/add-doctor" element={<AddDoctor />} />
+            <Route path="admin/view-doctor" element={<AllDoctor />} />
           </Route>
 
           <Route path="*" element={<PageNotFound />}></Route>

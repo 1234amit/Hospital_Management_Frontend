@@ -27,6 +27,7 @@ import centerHospital from '../assets/img/center_hospital.png';
 const Home = () => {
   return (
     <div>
+        
         {/* <!-- ===============counter-start============== --> */}
         <section className='mt-40'>
             <div class="back mt-6 lg:mt-20">
